@@ -12,6 +12,7 @@ Click the link for instructions on that.
 - [ ] Change check speed from command and control site.
 - [ ] Stop all servers running your command and control site.
 - [ ] More options for request types (GET, POST etc.).
+- [ ] Run in log mode and not in log mode (Stops all console logs, Good for hiding.)
 - [ ] Get 10 stars.
 
 ### Disclaimer
