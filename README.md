@@ -7,5 +7,12 @@ Because of how we made the script it is super easy to run on any server with Nod
 ## [Setting up your pastebin](https://github.com/OddDevelopment/PasteBin-Botnet/wiki/Setting-up-your-command-and-control-server-on-rentry)
 Click the link for instructions on that.
 
+### Todo list:
+- [ ] Edit speed from command and control site.
+- [ ] Change check speed from command and control site.
+- [ ] Stop all servers running your command and control site.
+- [ ] More options for request types (GET, POST etc.).
+- [ ] Get 10 stars.
+
 ### Disclaimer
 This was just made as a proof of concept because I though it would be funny to use a paste site as a command and control server please do not use for any real attacks without permission! Remeber DDoS attacks break the law and breaking the law is bad, Don't do it ;).
